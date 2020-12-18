@@ -19,8 +19,8 @@ trigger: none
 pr: none
 
 variables:
-  ServiceConnection: <YourServiceConnection> #permissions set? https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting#required-permissions-in-azure 
-  ManagementGroupId: <YourManagementGroupId>
+  ServiceConnection: pp-azGovReport
+  ManagementGroupId: QuorumMGMT
   SubscriptionQuotaIdWhitelist: undefined
   WikiDir: wiki
   CsvDelimiter: ;
