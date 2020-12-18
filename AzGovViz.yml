@@ -57,9 +57,11 @@ jobs:
   - task: AzurePowerShell@4
     inputs:
       azureSubscription: '$(ServiceConnection)'
+      ScriptType: 'FilePath'
       ScriptPath: '$(System.DefaultWorkingDirectory)/$(ScriptDir)/$(Script)'
       ScriptArguments: '-ManagementGroupId $(ManagementGroupId) -OutputPath $(WikiDir) -CsvDelimiter "$(CsvDelimiter)" -AzureDevOpsWikiAsCode -SubscriptionQuotaIdWhitelist $(SubscriptionQuotaIdWhitelist)'
-      preferredAzurePowerShellVersion: 3.1.0
+      errorActionPreference: 'silentlyContinue'
+      preferredAzurePowerShellVersion: '3.1.0'
     displayName: 'Run AzGovViz'
   - powershell: |
       write-host "#################################"
