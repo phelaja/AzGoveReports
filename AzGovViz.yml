@@ -20,7 +20,7 @@ pr: none
 
 variables:
   ServiceConnection: pp-azGovReport
-  ManagementGroupId: QuorumMGMT
+  ManagementGroupId: qbsd
   SubscriptionQuotaIdWhitelist: undefined
   WikiDir: wiki
   CsvDelimiter: ;
